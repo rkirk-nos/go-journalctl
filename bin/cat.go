@@ -1,13 +1,14 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"io"
 	"os"
 	"time"
 
-	"github.com/Velocidex/go-journalctl/parser"
 	kingpin "github.com/alecthomas/kingpin/v2"
+	"github.com/rkirk-nos/go-journalctl/parser"
 	ntfs_parser "www.velocidex.com/golang/go-ntfs/parser"
 )
 
@@ -87,7 +88,7 @@ func doCat() {
 }
 
 func PrintOnce(journal *parser.JournalFile) {
-	for log := range journal.GetLogs() {
+	for log := range journal.GetLogs(context.Background()) {
 		fmt.Printf("%v\n", log)
 	}
 }
