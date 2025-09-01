@@ -1,4 +1,4 @@
-module github.com/Velocidex/go-journalctl
+module github.com/rkirk-nos/go-journalctl
 
 go 1.22.2
 

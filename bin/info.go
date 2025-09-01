@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Velocidex/go-journalctl/parser"
 	kingpin "github.com/alecthomas/kingpin/v2"
+	"github.com/rkirk-nos/go-journalctl/parser"
 	ntfs_parser "www.velocidex.com/golang/go-ntfs/parser"
 )
 
